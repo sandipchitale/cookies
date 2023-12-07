@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies Panel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            display: grid;
+            grid-template: 1fr/1fr;
+        }
+
+        .viewport {
+            display: grid;
+            grid-template: 1fr/1fr;
+            width: 100vw;
+            max-width: 100vw;
+            height: 100vh;
+            max-height: 100vh;
+        }
+
+        .view {
+            justify-self: stretch;
+            grid-template: 1fr/1fr;
+            align-items: center;
+            justify-items: start;
+            padding: 0;
+            overflow-y: scroll;
+        }
+
+        .fixTableHead {
+            overflow-y: auto;
+            height: 110px;
+        }
+
+        .fixTableHead thead tr {
+            position: sticky;
+            top: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th,td {
+            text-align: start;
+            overflow-wrap: break-word;
+        }
+
+        thead > tr {
+            background-color: #ddd;
+        }
+
+        th,td {
+            padding: 5px;
+            overflow-wrap: break-word;
+        }
+
+
+        th:nth-child(1),td:nth-child(1) {
+            max-width: 10vw;
+            min-width: 10vw;
+        }
+
+        th:nth-child(2),td:nth-child(2) {
+            max-width: 25vw;
+            min-width: 25vw;
+        }
+
+        th:nth-child(3),td:nth-child(3) {
+            max-width: 5vw;
+            min-width: 5vw;
+        }
+
+        th:nth-child(4),td:nth-child(4) {
+            max-width: 5vw;
+            min-width: 5vw;
+        }
+
+        th:nth-child(5),td:nth-child(5) {
+            max-width: 5vw;
+            min-width: 5vw;
+        }
+
+        th:nth-child(6),td:nth-child(6) {
+            max-width: 49vw;
+            min-width: 49vw;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        #clear {
+            border-radius: 5px;
+            padding-left: 4px;
+            padding-right: 4px;
+            margin-right: 4px
+        }
+
+    </style>
+</head>
+<body>
+    <div class="viewport">
+        <div class="view">
+            <table class="fixTableHead">
+                <thead>
+                    <tr>
+                        <th><button id="clear">Clear</button> URL</th>
+                        <th>Cookie Name</th>
+                        <th>Http Only</th>
+                        <th>Secure</th>
+                        <th>Same Site</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody id="tb">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="cookiespanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "cookies",
+  "version": "1.0.0",
+  "description": "Chrome Devetools localhost Cookies panel.",
+  "icons": {
+    "128": "icons/cookies128.png"
+  },
+  "devtools_page": "cookies.html",
+  "manifest_version": 3
+}
